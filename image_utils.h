@@ -1,7 +1,7 @@
-//! @file bmp_utils.h
+//! @file image_utils.h
 
-#ifndef BMP_UTILS
-#define BMP_UTILS
+#ifndef IMAGE_UTILS
+#define IMAGE_UTILS
 
 //-----------------------------------------------------------------------------
 
@@ -43,14 +43,21 @@ typedef struct Bitmap_file_header_info
 
 //-----------------------------------------------------------------------------
 
-Image_info read_image (FILE    *bmp_file,  
+Image_info read_image (FILE    *image_file,  
                        uint32_t width,    uint32_t height, 
                        uint32_t pos_x,    uint32_t pos_y  );
                        
 sf::Image set_image (Image_info image_info);
 
+void image_info_ctor (Image_info *image_info, uint32_t width, 
+                                              uint32_t height);
+
 void image_info_dtor (Image_info *image_info);
+
+void bmp_dump (FILE *image_file);
+
+void create_bmp_file (Image_info image_info);
 
 //-----------------------------------------------------------------------------
 
-#endif //BMP_UTILS
+#endif //IMAGE_UTILS

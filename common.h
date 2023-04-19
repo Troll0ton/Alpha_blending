@@ -23,7 +23,10 @@
 #define byte_8 uint64_t
 
 //-----------------------------------------------------------------------------
-// BMP HEADER INFO
+
+#define N(i)    \
+    NUM_OF_##i
+
 #define FH_SIZE 14
 #define FH_INFO_SIZE 40
 
@@ -31,19 +34,9 @@
 
 #define SOLID 255
 
-#define INC_ALPHA 450
-
 #define DELETED_PAR 0xBADDED
 
-#define IMAGE_POS pos_y * width + pos_x
-
-//-----------------------------------------------------------------------------
-
-const int   width      = 2560;
-const int   height     = 1440;
-const int   accuracy   = 256;
-const int   max_radius = 100;
-const float scale      = 0.002;
+#define NUM_OF_TESTS 1000
 
 //-----------------------------------------------------------------------------
 
