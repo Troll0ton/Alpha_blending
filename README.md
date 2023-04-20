@@ -12,6 +12,9 @@ This project is aimed at analysing the applications of **AVX-instructions** in w
 This method is often used for multi-pass image processing with the subsequent combination of these parts into a single two-dimensional resulting image.
 The calculation of the final pixel color in this work was carried out according to the following formula: 
 
+```
+RES_COLOR = FRONT_COLOR * FRONT_ALPHA + BACK_COLOR * (1 - FRONT_ALPHA)
+```
 
 ---
 
